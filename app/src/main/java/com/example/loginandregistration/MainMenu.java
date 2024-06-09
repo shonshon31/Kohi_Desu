@@ -56,9 +56,17 @@ public class MainMenu extends AppCompatActivity {
             public void onClick(View view) {
                 try {
                     String combinedOrder = getCombinedSelectedOrder();
-                    Toast.makeText(MainMenu.this, combinedOrder, Toast.LENGTH_SHORT).show();
-                    Log.d("MainMenu", "Checkout button clicked, starting Checkout activity");
+                    int ameQty = Integer.parseInt(quanAme.getText().toString());
+                    int capuQty = Integer.parseInt(quanCapu.getText().toString());
+                    int macchiQty = Integer.parseInt(quanMacchi.getText().toString());
+                    double totalPrice = calculateTotalPrice(ameQty, capuQty, macchiQty);
+
                     Intent intent = new Intent(MainMenu.this, Checkout.class);
+                    intent.putExtra("combinedOrder", combinedOrder);
+                    intent.putExtra("americanoQty", ameQty);
+                    intent.putExtra("cappuccinoQty", capuQty);
+                    intent.putExtra("macchiatoQty", macchiQty);
+                    intent.putExtra("totalPrice", totalPrice);
                     startActivity(intent);
                     finish();
                 } catch (Exception e) {
@@ -194,5 +202,13 @@ public class MainMenu extends AppCompatActivity {
         }
 
         return "Americano: " + selectedValue1 + ", Cappuccino: " + selectedValue2 + ", Macchiato: " + selectedValue3;
+    }
+    private double calculateTotalPrice(int ameQty, int capuQty, int macchiQty) {
+        // Calculate total price based on quantity and prices of each item
+        // Adjust this calculation based on your actual pricing logic
+        double amePrice = 55;  // Sample price for Americano
+        double capuPrice = 65; // Sample price for Cappuccino
+        double macchiPrice = 75; // Sample price for Macchiato
+        return (ameQty * amePrice) + (capuQty * capuPrice) + (macchiQty * macchiPrice);
     }
 }
