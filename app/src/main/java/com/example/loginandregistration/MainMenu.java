@@ -2,6 +2,7 @@ package com.example.loginandregistration;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -53,11 +54,17 @@ public class MainMenu extends AppCompatActivity {
         checkOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String combinedOrder = getCombinedSelectedOrder();
-                Toast.makeText(MainMenu.this, combinedOrder, Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(getApplicationContext(), Checkout.class);
-                startActivity(intent);
-                finish();
+                try {
+                    String combinedOrder = getCombinedSelectedOrder();
+                    Toast.makeText(MainMenu.this, combinedOrder, Toast.LENGTH_SHORT).show();
+                    Log.d("MainMenu", "Checkout button clicked, starting Checkout activity");
+                    Intent intent = new Intent(MainMenu.this, Checkout.class);
+                    startActivity(intent);
+                    finish();
+                } catch (Exception e) {
+                    Log.e("MainMenu", "Error starting Checkout activity", e);
+                    Toast.makeText(MainMenu.this, "Error: " + e.getMessage(), Toast.LENGTH_LONG).show();
+                }
             }
         });
 
