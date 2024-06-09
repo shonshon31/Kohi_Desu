@@ -41,7 +41,7 @@ public class Checkout extends AppCompatActivity {
             btn_back.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(Checkout.this, MainMenu.class);
+                    Intent intent = new Intent(getApplicationContext(), MainMenu.class);
                     startActivity(intent);
                     finish();
                 }
@@ -50,8 +50,11 @@ public class Checkout extends AppCompatActivity {
             order.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(Checkout.this, Login.class);
+                    Intent intent = new Intent(getApplicationContext(), MainMenu.class);
+                    startActivity(intent);
                     Toast.makeText(Checkout.this, "Thank Your for Ordering, your Coffee will be delivered to you shortly.", Toast.LENGTH_SHORT).show();
+                    finish();
+
                 }
             });
 
