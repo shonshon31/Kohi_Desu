@@ -1,23 +1,351 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:gravity="center"
+    android:orientation="vertical"
     tools:context=".MainMenu">
+
 
     <TextView
         android:id="@+id/user_details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-/>
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="353dp"
+        android:layout_marginBottom="696dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Logout" />
-</LinearLayout>
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="667dp"
+        android:layout_marginEnd="279dp"
+        android:layout_marginBottom="16dp"
+        android:baselineAligned="false"
+        android:text="Logout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="376dp"
+        android:layout_marginBottom="696dp"
+        android:text="Hi, "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="69dp"
+        android:layout_marginEnd="216dp"
+        android:layout_marginBottom="643dp"
+        android:text="Pick your Coffee and its Size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="120dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginEnd="271dp"
+        android:layout_marginBottom="479dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ameri" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="155dp"
+        android:layout_height="143dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="276dp"
+        android:layout_marginEnd="236dp"
+        android:layout_marginBottom="312dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/capu" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="137dp"
+        android:layout_height="176dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="439dp"
+        android:layout_marginEnd="254dp"
+        android:layout_marginBottom="116dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/macchi" />
+
+    <RadioGroup
+        android:id="@+id/szAme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="125dp"
+        android:layout_marginEnd="176dp"
+        android:layout_marginBottom="510dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/tallAme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12oz" />
+
+        <RadioButton
+            android:id="@+id/grandeAme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="16oz" />
+
+        <RadioButton
+            android:id="@+id/ventiAme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="18oz" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/szCapu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="204dp"
+        android:layout_marginTop="306dp"
+        android:layout_marginEnd="144dp"
+        android:layout_marginBottom="329dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/tallCapu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12oz" />
+
+        <RadioButton
+            android:id="@+id/grandeCapu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="16oz" />
+
+        <RadioButton
+            android:id="@+id/ventiCapu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="18oz" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/szMacchi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="185dp"
+        android:layout_marginTop="470dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginBottom="165dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/tallMacchi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12oz" />
+
+        <RadioButton
+            android:id="@+id/grandeMacchi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="16oz" />
+
+        <RadioButton
+            android:id="@+id/ventiMacchi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="18oz" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/minusame"
+        android:layout_width="33dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="268dp"
+        android:layout_marginTop="154dp"
+        android:layout_marginEnd="110dp"
+        android:layout_marginBottom="541dp"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/quaname"
+        android:layout_width="39dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="301dp"
+        android:layout_marginTop="154dp"
+        android:layout_marginEnd="71dp"
+        android:layout_marginBottom="541dp"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/plusame"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="340dp"
+        android:layout_marginTop="154dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="541dp"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/pluscapu"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="340dp"
+        android:layout_marginTop="500dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="195dp"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/quancapu"
+        android:layout_width="39dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="301dp"
+        android:layout_marginTop="500dp"
+        android:layout_marginEnd="71dp"
+        android:layout_marginBottom="195dp"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/minuscapu"
+        android:layout_width="33dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="268dp"
+        android:layout_marginTop="500dp"
+        android:layout_marginEnd="110dp"
+        android:layout_marginBottom="195dp"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/plusmacchi"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="359dp"
+        android:layout_marginTop="336dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="359dp"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/quanmacchi"
+        android:layout_width="39dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="320dp"
+        android:layout_marginTop="336dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="359dp"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/minusmacchi"
+        android:layout_width="33dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="287dp"
+        android:layout_marginTop="336dp"
+        android:layout_marginEnd="91dp"
+        android:layout_marginBottom="359dp"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/btn_checkout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="667dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="16dp"
+        android:text="Checkout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
